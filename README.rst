@@ -10,11 +10,8 @@ PBA [Waeber2013]
    :alt: Python version
    :target: https://pypi.python.org/pypi/pba_waeber2013
 
-.. image:: https://img.shields.io/readthedocs/pba_waeber2013.svg
-   :alt: Documentation
-   :target: https://pba_waeber2013.readthedocs.io/en/latest/?badge=latest
-
-.. image:: https://img.shields.io/github/workflow/status/kalekundert/pba_waeber2013/Test%20and%20release/master
+.. image:: 
+   https://img.shields.io/github/workflow/status/kalekundert/pba_waeber2013/Test%20and%20release/master
    :alt: Test status
    :target: https://github.com/kalekundert/pba_waeber2013/actions
 
