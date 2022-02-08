@@ -30,15 +30,15 @@ This is an implementation of the probabilistic bisection algorithm (PBA)
 described by Rolf Waeber in his 2013 PhD thesis.  PBA is a 1D stochastic 
 root-finding algorithm.  This means that it is meant to find the point where a 
 noisy function (i.e. a function that may return different values each time its 
-evaluated at the same point) crosses the x-axis.  More precisely, given 
-:math:`g(x) = f(x) + ε(x)`, the goal is to find :math:`x` such that 
-:math:`E[g(x)] = 0`, where :math:`f(x)` is the function we are interested in, 
-:math:`ε` is a normally distributed noise function with median 0, :math:`g(x)` 
-is the only way we can observe :math:`f(x)`, and :math:`E[g(x)]` is the 
-expected value of :math:`g(x)`. 
+evaluated at the same point) crosses the x-axis.  More precisely, given *g(x) = 
+f(x) + ε(x)*, the goal is to find *x* such that *E[g(x)] = 0*, where 
+*f(x)* is the function we are interested in, *ε* is a normally 
+distributed noise function with median 0, *g(x)* is the only way we can 
+observe *f(x)*, and *E[g(x)]* is the expected value of 
+*g(x)*. 
 
 This algorithm works by repeatedly evaluating the noisy function at a single 
-:math:`x` until the probability that we know the true sign of :math:`f(x)` 
+*x* until the probability that we know the true sign of *f(x)* 
 exceeds a specified threshold.  This information is used to build a Bayesian 
 posterior distribution describing the location of the root.  The next point to 
 evaluate is then chosen from this distribution.  There are two features that 
