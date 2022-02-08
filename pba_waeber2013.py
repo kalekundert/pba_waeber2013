@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
 
+"""
+Implementation of the stochastic root-finding algorithm described by 
+[Waeber2013].
+"""
+
 __version__ = '0.0.0'
 
 import numpy as np
