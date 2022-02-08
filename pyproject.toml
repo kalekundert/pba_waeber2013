@@ -1,0 +1,53 @@
+[build-system]
+requires = ["flit_core"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.metadata]
+module = "pba_waeber2013"
+author = "Kale Kundert"
+author-email = "kale@thekunderts.net"
+home-page = 'https://github.com/kalekundert/pba_waeber2013'
+description-file = 'README.rst'
+requires-python = "~=3.6"
+requires = [
+  'numpy',
+]
+classifiers = [
+  'Programming Language :: Python :: 3',
+  'License :: OSI Approved :: MIT License',
+]
+
+[tool.flit.metadata.requires-extra]
+test = [
+  'pytest',
+  'pytest-cov',
+  'parametrize_from_file',
+  'coveralls',
+]
+doc = [
+  'sphinx',
+  'sphinx_rtd_theme',
+  'autoclasstoc',
+]
+
+[tool.flit.metadata.urls]
+'Documentation' = 'https://pba_waeber2013.readthedocs.io/en/latest/'
+'Version Control' = 'https://github.com/kalekundert/pba_waeber2013'
+'Bug Tracker' = 'https://github.com/kalekundert/pba_waeber2013/issues'
+'Continuous Integration' = 'https://github.com/kalekundert/pba_waeber2013/actions'
+'Test Coverage' = 'https://coveralls.io/github/kalekundert/pba_waeber2013'
+
+[tool.pytest.ini_options]
+addopts = "--doctest-modules --doctest-glob='*.rst' --ignore-glob='tests/plot_*.py' --ignore=README.rst"
+doctest_optionflags = 'NORMALIZE_WHITESPACE'
+
+[tool.pccc]
+header_length = 72
+types = ["chore", "docs", "feat", "fix", "refactor", "style", "test"]
+ignore_generated_commits = true
+generated_commits = ['^Merge']
+
+[tool.semantic_release]
+version_variable = 'pba_waeber2013.py:__version__'
+build_command = 'python -m pip install flit && flit build'
+major_on_zero = false
