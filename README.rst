@@ -55,10 +55,10 @@ However, there are some caveats to be aware of:
 
 2. The algorithm isn't very numerically stable.  The posterior distribution is 
    represented using two arrays: one for the bin edges and one for the bin 
-   heights.  As the algorithms progress, the bins near the root get very close 
-   together and very tall, which leads to loss-of-precision and overflow 
-   issues.  My only advice on how to avoid these problems is to limit the 
-   number of iterations.
+   heights.  As the algorithm progresses, the bins near the root get very thin 
+   and very tall, which leads to loss-of-precision and overflow issues.  My 
+   only advice on how to avoid these problems is to limit the number of 
+   iterations.  It might also help to increase the *p_c* parameter.
 
 Note that I myself only have a rudimentary understanding of the math behind 
 this algorithm.  This implementation is based on scripts I received from the 
