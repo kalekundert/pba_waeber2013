@@ -188,8 +188,8 @@ class ConfidenceIntervals:
         x_hi_seq = xs[K[-1] + 1]
 
         if n > 0:
-            x_lo_seq = max(x_lo_seq, ci[0, n-1])
-            x_hi_seq = min(x_hi_seq, ci[1, n-1])
+            x_lo_seq = max(x_lo_seq, ci[2, n-1])
+            x_hi_seq = min(x_hi_seq, ci[3, n-1])
 
         ci[:,n] = x_lo, x_hi, x_lo_seq, x_hi_seq
 
