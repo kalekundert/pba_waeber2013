@@ -218,6 +218,10 @@ class Result:
     ci_seq: np.ndarray
     converged: bool
 
+    @property
+    def p_post(self):
+        return exp(self.log_p_post)
+
 def pba_waeber2013(
         f, a, b, *,
         tol=None,

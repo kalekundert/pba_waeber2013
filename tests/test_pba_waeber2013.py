@@ -191,4 +191,4 @@ def test_pba_waeber2013_params(
             assert len(result.f_obs) == n_obs
         if n_post:
             assert len(result.x_post) == n_post + 2
-            assert len(result.log_p_post) == n_post + 1
+            assert len(result.p_post) == n_post + 1
